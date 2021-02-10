@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="content" role="main">
+      <div class="card highlight-card card-small" >
+        <h4>Students Registration Form</h4>
+      </div>
+
+
+  <form class="form" id="form"[formGroup]="registrationForm" (ngSubmit)="OnSubmit()">
+    
+    <div class="Form-Group">
+      <label>Firstname</label><br>
+    <input type="text" name="firstname" formControlName="firstname" placeholder="Firstname"><br><br>
+    </div>
+    <div class="Form-Group">
+      <label>Middlename</label><br>
+    <input type="text" name="middlename" formControlName="middlename" placeholder="Middlename"><br><br>   
+    </div>
+    <div class="Form-Group">
+    <label>Lastname</label><br>
+    <input type="text" name="lastname" formControlName="lastname" placeholder="Lastname"><br><br>      
+    </div>
+    <div class="Form-Group">
+     <label>Course</label><br>
+    <select type="text" name="course" formControlName="course" value="Course">
+      <option>B.Tech</option>
+      <option>B.E</option>
+      <option>M.Tech</option>
+      <option>M.Sc</option>
+    </select><br>     
+    </div>
+    <div class="Form-Group">
+    <label>Phone</label><br>
+    <input type="text" name="phone" formControlName="phone" placeholder="Mobile No."><br><br>      
+    </div>
+    <div class="Form-Group">
+     <label>Gender</label><br>
+      <input type="radio" name="gender" value="Male" formControlName="gender" >Male
+      <input type="radio" name="gender" value="Female" formControlName="gender" >Female<br><br>     
+    </div>
+    <div class="Form-Group">
+    <input type="text" name="currentaddress" formControlName="currentaddress" placeholder="Current Address"><br><br>      
+    </div>
+    <div class="Form-Group">
+    <input type="email" name="email" formControlName="email" placeholder="Email"><br><br>      
+    </div>
+    <div class="Form-Group">
+      <input type="password" name="password" formControlName="password" placeholder="Password"><br><br>  
+    </div>
+    <div class="Form-Group">
+    <input type="password" name="repassword" formControlName="repassword" placeholder="Re-Enter Password"><br><br>
+      
+    </div>
+    <div class="Form-Group">
+    <input type="submit" value="Register"[disabled]='!registrationForm.valid'>
+      
+    </div>
+    </form>
+  </div>    
+  </body>
+</html>
